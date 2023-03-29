@@ -9,19 +9,19 @@
  */
 int _putchar(int c)
 {
-	static char buf[1024];
-	static int pos;
+static char buf[1024];
+static int pos;
 
-	if (c == -1 || pos >= 1024)
-	{
-		write(1, buf, pos);
-		pos = 0;
-	}
-	if (c != -1)
-	{
-		buf[pos++] = c;
-	}
-	return (1);
+if (c == -1 || pos >= 1024)
+{
+write(1, buf, pos);
+pos = 0;
+}
+if (c != -1)
+{
+buf[pos++] = c;
+}
+return (1);
 }
 
 /**
@@ -32,9 +32,9 @@ int _putchar(int c)
  */
 int _puts(char *str)
 {
-	char *count = str;
+char *count = str;
 
-	while (*str)
-		_putchar(*str++);
-	return (str - count);
+while (*str)
+_putchar(*str++);
+return (str - count);
 }
